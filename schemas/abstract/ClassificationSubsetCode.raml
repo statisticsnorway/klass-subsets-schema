@@ -1,0 +1,47 @@
+#%RAML 1.0 Library
+
+types:
+  ClassificationSubsetCode:
+    description: A code reference in a subset of classifications
+    displayName: Classification code
+
+    properties:
+      classificationId:
+        type: string
+        description: An id to a classification or code list
+        displayName: Origin classification id
+
+      code:
+        type: string
+        description: The ID (often a number) of the code in the KLASS classification
+        displayName: Code
+
+      classificationVersions:
+        type: string[]
+        description: Links to the classification versions that contain the code in the given validity period
+        displayName: Origin classifiscation versions
+
+      name:
+        type: string
+        description: The name of the code at the time it was saved
+        displayName: Code Name
+
+      rank:
+        type: integer
+        description: Position in the list
+        displayName: Position in the list
+
+      level:
+        type: string
+        description: level of code in classification
+        displayName: level
+
+      validFromInRequestedRange:
+        type: date-only
+        description: The validFrom date of the classification version this code is taken from
+        displayName: validFrom in requested range
+
+      validToInRequestedRange?:
+        type: date-only
+        description: The validTo date of the classification version this code is taken from
+        displayName: validTo in requested range

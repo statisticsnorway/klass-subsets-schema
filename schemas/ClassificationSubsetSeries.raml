@@ -1,6 +1,7 @@
 #%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Domain: ./abstract/Domain.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
   ContactInformation: ./abstract/ContactInformation.raml
@@ -10,7 +11,7 @@ types:
   ClassificationSubsetSeries:
     description: A subset of classifications
     displayName: Classification subset series
-    type: object
+    type: Domain.Domain
 
     properties:
       classificationType?:

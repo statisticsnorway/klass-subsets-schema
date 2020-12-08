@@ -1,21 +1,19 @@
 #%RAML 1.0 Library
-
 types:
   ContactInformation:
-    description: Contact information for a person
+    description: A generic and expandable key-value-store for adding present and future ContactInformation-attributes to any information object.
+    type: object
 
     properties:
-      phone:
+      contactInformationType:
         type: string
-        description: phone number of the person
-        displayName: phone number
-
-      email:
+        description: The type (key) of the ContactInformation-attribute.
+        displayName: Contact information type
+        enum:
+          - PHONE
+          - EMAIL
+          - NAME
+      value:
         type: string
-        description: the email adress of the person
-        displayName: email adress
-
-      name:
-        type: string
-        description: the full name of the person
-        displayName: full name
+        description: One value for this contactInformationType.
+        displayName: Value

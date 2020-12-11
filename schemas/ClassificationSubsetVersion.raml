@@ -4,7 +4,7 @@ uses:
   Domain: ./abstract/Domain.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  ContactInformation: ./abstract/ContactInformation.raml
+  AgentDetails: ./abstract/AgentDetails.raml
   ClassificationSubsetCode: ./abstract/ClassificationSubsetCode.raml
   AgentInRole: ./AgentInRole.raml
 
@@ -66,10 +66,9 @@ types:
         displayName: Last modified date time
 
       lastModifiedBy?:
-        type: string[]
-        description: Last updated by
-        displayName: Last updated by
-        (Link.types): [ ContactInformation ]
+        type: AgentDetails.AgentDetails[]
+        description: Last modified by
+        displayName: Last modified by
 
       validFrom:
         type: datetime

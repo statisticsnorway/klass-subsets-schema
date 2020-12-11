@@ -4,7 +4,7 @@ uses:
   Domain: ./abstract/Domain.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  ContactInformation: ./abstract/ContactInformation.raml
+  AgentDetails: ./abstract/AgentDetails.raml
   ClassificationSubsetVersion: ./ClassificationSubsetVersion.raml
 
 types:
@@ -73,12 +73,12 @@ types:
         displayName: Last modified date time
 
       lastModifiedBy?:
-        type: ContactInformation.ContactInformation[]
-        description: Last updated by
-        displayName: Last updated by
+        type: AgentDetails.AgentDetails[]
+        description: Last modified by
+        displayName: Last modified by
 
       contactPerson?:
-        type: ContactInformation.ContactInformation[]
+        type: AgentDetails.AgentDetails[]
         description: Contact info to the person responsible for this subset
         displayName: Contact information
 

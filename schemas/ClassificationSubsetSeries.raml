@@ -17,7 +17,12 @@ types:
       classificationType?:
         type: string
         description: What kind of classificaiton this is (Always Subset if present)
-        displayName: Kind of classification
+        displayName: Type of classification
+
+      classificationFamily:
+        type: string
+        description: What kind of classificaiton family does this subset belong to
+        displayName: Classification family
 
       id:
         type: string
@@ -40,7 +45,7 @@ types:
         displayName: Short name
 
       createdDate:
-        type: datetime
+        type: date-only
         description: The date on which the information object was created
         displayName: Created date
 

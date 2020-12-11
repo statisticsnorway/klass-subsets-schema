@@ -25,11 +25,6 @@ types:
         description: The global unique identifier (GUID) of the subset series this version belongs to
         displayName: Subset ID
 
-      name:
-        type: MultilingualText.MultilingualText[]
-        description: A term which designates a concept, in this case an information object. The identifying name will be the preferred designation. There will be many terms to designate the same information object, such as synonyms and terms in other languages.
-        displayName: Name
-
       description?:
         type: MultilingualText.MultilingualText[]
         description: The description of the information object
@@ -50,8 +45,14 @@ types:
           - OPEN
           - DEPRECATED
 
+      statisticalUnits?:
+        type: string[]
+        description: Statistical unit references a subset tagged with.
+        displayName: Staistical units
+        #TODO: link to statisticalUnit (id/guid)?
+
       createdDate:
-        type: datetime
+        type: date-only
         description: The date on which the information object was created
         displayName: Created date
 
@@ -62,7 +63,7 @@ types:
 
       lastModified:
         type: datetime
-        description: The date on which the object was last updated.
+        description: The date time on which the object was last updated.
         displayName: Last modified date time
 
       lastModifiedBy?:
@@ -71,12 +72,12 @@ types:
         displayName: Last modified by
 
       validFrom:
-        type: datetime
+        type: date-only
         description: The date on which the information object is effective or valid. Set this date only once (constant). The same date for all versions of this information object.
         displayName: Valid from
 
       validUntil?:
-        type: datetime
+        type: date-only
         description: The date on which the information object is no longer effective or valid.
         displayName: Valid until
 

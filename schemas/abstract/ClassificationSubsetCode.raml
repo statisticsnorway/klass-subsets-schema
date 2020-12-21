@@ -1,4 +1,6 @@
 #%RAML 1.0 Library
+uses:
+  MultilingualText: ./MultilingualText.raml
 
 types:
   ClassificationSubsetCode:
@@ -22,7 +24,7 @@ types:
         displayName: Origin classifiscation versions
 
       name:
-        type: string
+        type: MultilingualText.MultilingualText[]
         description: The name of the code at the time it was saved
         displayName: Code Name
 

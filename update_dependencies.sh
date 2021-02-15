@@ -3,7 +3,7 @@
 rm -rf gsim-raml-schema
 git clone https://github.com/statisticsnorway/gsim-raml-schema.git
 
-echo "Copying latest version of dependencies (schemas) from 'gsim-raml-schema' into this project folder"
+echo "Copying latest version of dependencies (schemas) from repo 'gsim-raml-schema' into this project: $(pwd)"
 
 cp -r ./gsim-raml-schema/schemas/About.raml ./schemas/About.raml
 cp -r ./gsim-raml-schema/schemas/Agent.raml ./schemas/Agent.raml
